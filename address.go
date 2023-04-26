@@ -1,30 +1,31 @@
-package Address
-import (
-	"Math/Big"
+package address
 
+import (
+	"math/big"
 )
+
 const (
-	// HashLength is the expected length of the hash
-		HashLength = 32
-	// AddressLength is the expected length of the address
-		AddressLength = 20
+	HashLength    = 32
+	AddressLength = 20
 )
-type Address struct{
-	address 	[AddressLength]byte
-	toString  	string
+
+type Address struct {
+	address  [AddressLength]byte
+	toString string
 }
 
 type uint256 struct {
 	value *big.Int
 }
 
+type addressBook struct {
+	addresses map[Address]Address
+}
 
-var(
-	 Addresses 			map[Address]Address         	//Known Addresses
-)
+var AddressBook = addressBook{
+	addresses: make(map[Address]Address),
+}
 
-
-func getAddress(adds Address)(map[Address]Address)	{
-	return Addresses[adds]
-
+func (ab *addressBook) GetAddresses() map[Address]Address {
+	return ab.addresses
 }
