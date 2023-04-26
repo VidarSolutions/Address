@@ -10,8 +10,9 @@ const (
 )
 
 type Address struct {
-	address  [AddressLength]byte
-	toString string
+	Address  [AddressLength]byte
+
+	ToString 	string
 }
 
 type uint256 struct {
