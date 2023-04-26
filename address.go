@@ -20,11 +20,11 @@ type uint256 struct {
 
 
 var(
-	 Addresses 			map[Address]address         	//Known Addresses
+	 Addresses 			map[Address]Address         	//Known Addresses
 )
 
 
-func getAddress(adds Address)(map[Address]address)	{
+func getAddress(adds Address)(map[Address]Address)	{
 	return Addresses[adds]
 
 }
