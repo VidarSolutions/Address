@@ -29,3 +29,7 @@ var AddressBook = addressBook{
 func (ab *addressBook) GetAddresses() map[Address]Address {
 	return ab.addresses
 }
+
+func (ab *addressBook) AddAddress(addr Address) {
+	ab.addresses[addr] = addr
+}
